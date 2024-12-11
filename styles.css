@@ -1,0 +1,109 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+}
+
+/* Header and Menu */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #689dd2;
+    padding: 10px 20px;
+}
+
+/* Estilos para el menú */
+nav {
+    display: flex;
+}
+
+.menu {
+    list-style: none;
+    display: flex; /* Cambiar a flex para alinear horizontalmente */
+    margin-right: auto; /* Empujar el menú hacia la izquierda */
+}
+
+.menu li {
+    margin: 0 10px; /* Espacio entre las opciones del menú */
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px 15px;
+    transition: background-color 0.3s;
+}
+
+.menu a:hover {
+    background-color: rgba(6, 52, 98, 0.77);
+    border-radius: 5px;
+}
+
+.store-name {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    margin-left: auto; /* Empuja el nombre hacia la derecha */
+    text-align: right;
+    margin-right: 50px; /* Ajusta este valor según sea necesario para mayor separación */
+}
+
+
+
+
+
+
+/* Nombre de la empresa en la esquina derecha */
+.store-name {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: right;
+}
+
+/* Slider */
+.slider {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background-color: #f0f0f0;
+}
+
+.slides {
+    display: flex;
+    width: 300%; /* Ajuste para el ancho de las imágenes */
+    animation: slide 20s infinite ease-in-out; /* Ajuste para la velocidad y el tipo de animación */
+}
+
+.slides img {
+    width: 100%;
+    height: auto;
+}
+
+@keyframes slide {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(0); } /* Pausa en la primera imagen */
+    33% { transform: translateX(-100%); }
+}
+
+/* Footer */
+footer {
+    background-color: #4c87ca;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 20px;
+}

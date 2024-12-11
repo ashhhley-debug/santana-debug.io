@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css"> <!-- Archivo de estilos -->
+    <title>Ferretería El Clavo - Registro</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: rgba(23, 85, 208, 0.9);
+            background-size: cover;
+            width: 100vw;
+            height: 100vh;
+            overflow: hidden; /* Evitar scroll debido a las animaciones */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative; /* Necesario para los emojis cayendo */
+        }
+
+        /* Contenedor del formulario */
+        .login-container {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            width: 300px;
+            text-align: center;
+            z-index: 10; /* Asegura que esté por encima de los emojis cayendo */
+        }
+
+        .login-container h1 {
+            font-size: 24px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .login-container input[type="email"],
+        .login-container input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .login-container button {
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .login-container button:hover {
+            background-color: #0056b3;
+            transform: scale(1.05);
+        }
+
+        .login-container button:active {
+            transform: scale(0.95);
+        }
+
+        /* Estilo y animación de los emojis cayendo */
+        .falling-emoji {
+            position: absolute;
+            font-size: 2rem; /* Tamaño del emoji */
+            top: -50px; /* Asegura que empiecen justo fuera del área visible */
+            animation: fall 5s linear infinite;
+            opacity: 0.8;
+        }
+
+        @keyframes fall {
+            0% {
+                transform: translateY(-100vh) rotate(0deg); /* Empieza fuera de la pantalla */
+            }
+            100% {
+                transform: translateY(100vh) rotate(360deg); /* Llega al final con rotación */
+            }
+        }
+
+        /* Generar emojis con posición inicial aleatoria */
+        .falling-emoji:nth-child(1) { left: 10%; animation-duration: 4s; }
+        .falling-emoji:nth-child(2) { left: 30%; animation-duration: 5.5s; }
+        .falling-emoji:nth-child(3) { left: 50%; animation-duration: 6s; }
+        .falling-emoji:nth-child(4) { left: 70%; animation-duration: 4.5s; }
+        .falling-emoji:nth-child(5) { left: 90%; animation-duration: 5s; }
+    </style>
+</head>
+<body>
+    <!-- Emojis cayendo -->
+    <div class="falling-emoji">🔧</div>
+    <div class="falling-emoji">🪚</div>
+    <div class="falling-emoji">🛠️</div>
+    <div class="falling-emoji">🔩</div>
+    <div class="falling-emoji">⚙️</div>
+
+    <!-- Contenedor del formulario -->
+    <div class="login-container">
+        <h1>Ferretería El Clavo</h1>
+        <form action="index.html" method="GET">
+            <input type="email" placeholder="Correo Electrónico" required>
+            <input type="text" placeholder="ID de Compra" required>
+            <button type="submit">Ingresar</button>
+        </form>
+    </div>
+</body>
+</html>
